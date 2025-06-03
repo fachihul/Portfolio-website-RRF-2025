@@ -84,13 +84,50 @@
           </div>
           <div class="ratings">
             <div class="rating-box">
-              <h2>8+ <span>Years Experience</span></h2>
+              <h2>
+                <span class="counter">9</span>K+
+                <h3>Global Customer</h3>
+              </h2>
             </div>
             <div class="rating-box">
-              <h2>8K+ <span>Completed Projects</span></h2>
+              <h2>
+                <span class="counter">8</span>K+
+                <h3>Completed Projects</h3>
+              </h2>
             </div>
             <div class="rating-box">
-              <h2>90% <span>Client Satisfaction</span></h2>
+              <h2>
+                <span class="counter">6</span>K+
+                <h3>Client Satisfaction</h3>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h2>My Services</h2>
+          <div class="service-list">
+            <div class="service-item">
+              <h3>Web Development</h3>
+              <p>
+                I create responsive and user-friendly websites that look great
+                on all devices.
+              </p>
+            </div>
+            <div class="service-item">
+              <h3>UI/UX Design</h3>
+              <p>
+                I design intuitive user interfaces that enhance the user
+                experience.
+              </p>
+            </div>
+            <div class="service-item">
+              <h3>SEO Optimization</h3>
+              <p>
+                I optimize websites for search engines to improve visibility and
+                traffic.
+              </p>
             </div>
           </div>
         </div>
@@ -98,5 +135,23 @@
     </main>
 
     <footer></footer>
+    <!-- ✅ Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ✅ Then Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <!-- ✅ Then Counter-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <!-- ✅ Then your custom script -->
+    <script>
+      $(document).ready(function () {
+        $(".counter").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
   </body>
 </html>
