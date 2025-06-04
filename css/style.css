@@ -107,6 +107,7 @@ header {
   position: fixed;
   width: 100%;
   padding: 20px 0;
+  z-index: 1000;
 }
 .logo {
   cursor: pointer;
