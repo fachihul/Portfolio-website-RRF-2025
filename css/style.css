@@ -424,12 +424,12 @@ section.about {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 0px;
+  height: 0px;
   background: var(--accent--color);
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 24px;
+  font-size: 0px;
   font-weight: var(--font--weight--bold);
   text-decoration: none;
   z-index: 200;
@@ -437,11 +437,16 @@ section.about {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  scale: 0;
+  /* scale: 0.5; */
   border-radius: 50%;
 }
 .portfolio-item:hover a {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-  scale: 1;
+  /* scale: 1; */
+  width: 100px;
+  height: 100px;
+}
+.portfolio-item:hover i {
+  font-size: 24px;
 }
