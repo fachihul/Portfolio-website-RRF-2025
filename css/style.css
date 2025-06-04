@@ -28,7 +28,7 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -359,11 +359,12 @@ section.about {
 }
 .portfolio-items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing--lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+  grid-gap: 3.5em;
 }
 .portfolio-item {
   position: relative;
+  padding: 10px;
 }
 .portfolio-item::after {
   content: "";
@@ -396,13 +397,13 @@ section.about {
   z-index: 20;
 }
 .portfolio-item:hover::after {
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   /* transition: transform 0.2s ease-in-out; */
   opacity: 1;
   z-index: -100;
 }
 .portfolio-item:hover::before {
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   /* transition: transform 0.2s ease-in-out; */
   opacity: 1;
   z-index: -100;
@@ -415,8 +416,10 @@ section.about {
   transition: 0.5s;
 }
 .portfolio-item:hover img {
-  transform: scale(0.99);
+  transform: scale(0.95);
   transition: transform 0.2s ease-in-out;
+  opacity: 0.8;
+  filter: grayscale(100%);
 }
 
 .portfolio-item a {
