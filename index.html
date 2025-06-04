@@ -168,15 +168,15 @@
               <!-- <h2>Latest works</h2> -->
               <h3>Portfolio</h3>
             </div>
-            <ul>
-              <li><a href="#">All</a></li>
-              <li><a href="#">Wordpress</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Web Component</a></li>
+            <ul class="portfolio-filters">
+              <li><a href="#" data-filter="all">All</a></li>
+              <li><a href="#" data-filter="wordpress">Wordpress</a></li>
+              <li><a href="#" data-filter="webdev">Web Development</a></li>
+              <li><a href="#" data-filter="component">Web Component</a></li>
             </ul>
           </div>
           <div class="portfolio-items">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="wordpress">
               <img
                 src="https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -187,7 +187,7 @@
                 ></a>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="webdev">
               <img
                 src="https://images.unsplash.com/photo-1493020258366-be3ead1b3027?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -198,7 +198,7 @@
                 ></a>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="component">
               <img
                 src="https://images.unsplash.com/photo-1585247226801-bc613c441316?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -209,7 +209,7 @@
                 ></a>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="component webdev">
               <img
                 src="https://images.unsplash.com/photo-1594975960347-741e85f3e8ff?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -220,7 +220,10 @@
                 ></a>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div
+              class="portfolio-item"
+              data-category="component webdev wordpress"
+            >
               <img
                 src="https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -231,7 +234,10 @@
                 ></a>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div
+              class="portfolio-item"
+              data-category="wordpress webdev component"
+            >
               <img
                 src="https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Portfolio Item"
@@ -263,6 +269,30 @@
         $(".counter").counterUp({
           delay: 10,
           time: 1000,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Portfolio filter
+        $(".portfolio-filters a").click(function (e) {
+          e.preventDefault();
+
+          const filter = $(this).data("filter");
+
+          // Highlight active filter
+          $(".portfolio-filters a").removeClass("active");
+          $(this).addClass("active");
+
+          // Show/hide items based on category
+          $(".portfolio-item").each(function () {
+            const categories = $(this).data("category").split(" ");
+            if (filter === "all" || categories.includes(filter)) {
+              $(this).fadeIn(300);
+            } else {
+              $(this).fadeOut(300);
+            }
+          });
         });
       });
     </script>

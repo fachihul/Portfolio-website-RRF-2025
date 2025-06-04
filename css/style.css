@@ -456,3 +456,8 @@ section.about {
   transform: rotate(-45deg);
   transition: transform 0.2s ease-in-out;
 }
+
+.portfolio-filters a.active {
+  font-weight: bold;
+  color: #007bff;
+}
