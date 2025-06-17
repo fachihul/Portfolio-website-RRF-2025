@@ -27,3 +27,22 @@ $(document).ready(function () {
     });
   });
 });
+// Accordion
+const headers = document.querySelectorAll(".accordion-header");
+
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+
+    // Close all other content sections
+    document.querySelectorAll(".accordion-content").forEach((item) => {
+      if (item !== content) {
+        item.style.display = "none";
+      }
+    });
+
+    // Toggle the clicked section
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  });
+});
