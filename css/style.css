@@ -539,6 +539,55 @@ section.about {
   padding: 120px 0;
   background: #000;
 }
+/* For Logo Carousel */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  column-gap: 20px;
+  position: relative;
+}
+.logos::before,
+.logos::after {
+  position: absolute;
+  /* left: 0; */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+}
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+.logos:hover .logo-slide {
+  animation-play-state: paused;
+}
+.logo-slide {
+  animation: 35s slide infinite linear;
+  display: inline-block;
+}
+.logo-slide img {
+  display: inline-block;
+  height: auto;
+  max-width: 50px;
+  margin: 0 40px;
+}
+
 @media screen and (max-width: 1100px) {
   .skills {
     padding: 0 20px;

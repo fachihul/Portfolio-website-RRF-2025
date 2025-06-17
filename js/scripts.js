@@ -27,3 +27,6 @@ $(document).ready(function () {
     });
   });
 });
+// For logo Carousel
+let copy = document.querySelector(".logo-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
