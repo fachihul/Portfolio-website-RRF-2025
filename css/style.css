@@ -536,15 +536,45 @@ section.about {
   font-size: 40px;
 }
 .clients {
-  padding: 120px 0;
+  padding: 80px 0;
   background: #000;
+}
+.clients-heading h3 {
+  font-size: 40px;
+  font-weight: var(--font--weight--bold);
+  color: #ffffff;
+}
+.clients-heading p {
+  max-width: 40%;
+  color: #ffffff6b;
 }
 /* For Logo Carousel */
 .carousel {
   width: 100%;
   overflow: hidden;
+  position: relative;
+  margin-top: 40px;
 }
-
+.carousel::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+.carousel::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
 .carousel-track {
   display: flex;
   width: fit-content;
@@ -553,19 +583,18 @@ section.about {
 .carousel-track:hover {
   animation-play-state: paused;
 }
-
 .carousel-slide {
   display: flex;
 }
 
 .carousel-slide img {
   width: 120px;
-  margin: 10px;
+  /* margin: 10px; */
   height: auto;
   margin-right: 40px;
+  margin-left: 40px;
 }
 
-/* Keyframes for smooth scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0);
