@@ -603,6 +603,15 @@ section.about {
     transform: translateX(-50%);
   }
 }
+/* FAQ Section */
+.faq {
+  padding: 120px 0;
+}
+.faq-text h3 {
+  font-size: 40px;
+  font-weight: var(--font--weight--bold);
+  color: var(--primary--color);
+}
 
 @media screen and (max-width: 1100px) {
   .skills {
