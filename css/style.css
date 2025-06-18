@@ -484,7 +484,7 @@ section.about {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
   grid-gap: 3.5em;
-  margin-top: 32px;
+  margin: 32px 0;
 }
 .skills-items .single-item {
   padding: 2rem;
@@ -606,46 +606,117 @@ section.about {
 /* FAQ Section */
 .faq {
   padding: 120px 0;
+  overflow: hidden;
 }
+.faq .faq-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: flex-end; */
+  flex-wrap: wrap;
+  /* column-gap: 40px; */
+}
+.faq-text {
+  width: 40%;
+}
+.faq-text ul {
+  margin-top: 24px;
+}
+.faq-text ul li {
+  margin-bottom: 12px;
+}
+
 .faq-text h3 {
   font-size: 40px;
   font-weight: var(--font--weight--bold);
-  color: var(--primary--color);
+  color: #333;
 }
-.accordion {
-  width: 100%;
+#accordion {
+  width: 45%;
   max-width: 600px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
-.accordion-item {
-  border-bottom: 1px solid #ddd;
+#accordion {
+  width: 40%;
+  max-width: 600px;
 }
-
-.accordion-header {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 15px;
+#accordion li {
+  list-style: none;
   width: 100%;
-  text-align: left;
+  margin-bottom: 10px;
+  /* background: #fff; */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #00000011;
+}
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  color: #333;
+}
+#accordion li label span {
+  /* transform: rotate(90deg); */
+  font-size: 22px;
+  color: #333;
+}
+#accordion label + input[type="radio"] {
+  display: none;
+}
+#accordion .content {
+  padding: 0 10px;
+  line-height: 22px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
 
-.accordion-content {
-  display: none;
-  padding: 15px;
-  background-color: #fafafa;
-  font-size: 14px;
+#accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+  /* background-color: #fff; */
+}
+#accordion a {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 15px 30px;
+  /* background: #007bff; */
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-size: 16px;
+  transition: 0.5s;
+  column-gap: 2px;
+}
+#accordion a:hover {
+  background-color: #007bff;
+  color: white;
+  letter-spacing: 1px;
+  column-gap: 5px;
 }
 
 @media screen and (max-width: 1100px) {
   .skills {
-    padding: 0 20px;
+    padding: 80px 20px;
   }
   .skills-header p {
     max-width: 70%;
+  }
+  .clients {
+    padding: 80px 20px;
+  }
+  .faq {
+    padding: 80px 20px;
+  }
+  .faq .faq-wrapper {
+    justify-content: space-around;
+    /* align-items: flex-end; */
+    flex-wrap: wrap;
+    /* column-gap: 40px; */
   }
 }
 @media screen and (max-width: 650px) {
@@ -676,6 +747,27 @@ section.about {
   }
   .skills-header p {
     max-width: 100%;
+  }
+  .clients-heading {
+    text-align: center;
+  }
+  .clients-heading p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .faq .faq-wrapper {
+    flex-direction: column;
+    /* align-items: flex-end; */
+    /* flex-wrap: wrap; */
+    /* column-gap: 40px; */
+    justify-content: center;
+    /* text-align: center; */
+  }
+  .faq-text {
+    width: 100%;
+  }
+  #accordion {
+    width: 100%;
   }
 }
 @media screen and (max-width: 576px) {
