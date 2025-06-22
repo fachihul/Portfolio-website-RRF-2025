@@ -879,6 +879,11 @@ form button {
   color: #fff;
   padding: 8px 0;
 }
+footer {
+  padding: 120px 0;
+  border-top: 1px solid #000;
+  border-bottom: 0;
+}
 @media screen and (max-width: 1100px) {
   .testimonial-section {
     padding: 80px 20px;
