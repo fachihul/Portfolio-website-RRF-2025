@@ -906,7 +906,22 @@ footer .social-links {
 .social-links a:hover {
   color: #007bff;
 }
+.copyright {
+  margin-top: 1rem;
+  text-align: center;
+}
+.copyright p a {
+  display: inline-block;
+  text-decoration-line: underline !important;
+  transition: 0.5s;
+}
+.copyright p a:hover {
+  color: #007bff;
+}
 @media screen and (max-width: 1100px) {
+  .about {
+    padding: 80px 20px;
+  }
   .testimonial-section {
     padding: 80px 20px;
   }
@@ -929,6 +944,9 @@ footer .social-links {
     /* column-gap: 40px; */
   }
   .contact-section {
+    padding: 80px 20px;
+  }
+  footer {
     padding: 80px 20px;
   }
 }
