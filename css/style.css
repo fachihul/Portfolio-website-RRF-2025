@@ -863,7 +863,7 @@ form {
   background: #ffffff;
   gap: 20px;
   padding: 40px;
-  min-width: 350px;
+  min-width: 300px;
   max-width: 600px;
   border-radius: 5px;
 }
