@@ -811,6 +811,7 @@ section.about {
 .contact-wrapper {
   display: grid;
   row-gap: 32px;
+  width: auto;
 }
 .contact-header {
   display: flex;
@@ -863,7 +864,7 @@ form {
   background: #ffffff;
   gap: 20px;
   padding: 40px;
-  min-width: 300px;
+  min-width: 45%;
   max-width: 600px;
   border-radius: 5px;
 }
@@ -871,13 +872,13 @@ form input,
 textarea,
 button {
   border: 1px solid #3333330c;
-  padding: 16px;
+  padding: 16px 8px;
   border-radius: 5px;
 }
 form button {
   background: #007bff;
   color: #fff;
-  padding: 8px 0;
+  /* padding: 8px 0; */
 }
 footer {
   padding: 120px 0;
@@ -945,6 +946,9 @@ footer .social-links {
   }
   .contact-section {
     padding: 80px 20px;
+  }
+  .contact-row {
+    gap: 5%;
   }
   footer {
     padding: 80px 20px;
@@ -1023,6 +1027,9 @@ footer .social-links {
 @media screen and (max-width: 576px) {
   section.about {
     padding: 80px 20px;
+  }
+  form {
+    padding: 8px;
   }
   .about-content {
     flex-direction: column;
