@@ -919,7 +919,53 @@ footer .social-links {
 .copyright p a:hover {
   color: #007bff;
 }
+
+/* About Page CSS */
+.about-page {
+  padding: 80px 0;
+  background: #f4f3ed;
+}
+p.breadcrumb {
+  margin-top: 60px;
+}
+.about-page .about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* flex-wrap: wrap; */
+}
+.about-page .about-content span {
+  font-style: italic;
+  color: #007bff;
+  font-weight: bold;
+}
+.about-page .about-left {
+  width: 40%;
+  min-width: 300px;
+}
+.about-page .about-left h2 {
+  color: #333;
+}
+.about-page .about-right {
+  width: 50%;
+  min-width: 300px;
+  /* padding-top: 20px; */
+}
+.about-page .about-right h4 {
+  /* font-weight: bold; */
+  font-size: 45px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  color: #333;
+  /* word-spacing: 3px; */
+  /* padding-top: 20px; */
+}
 @media screen and (max-width: 1100px) {
+  .about-page {
+    padding: 80px 20px;
+  }
   .about {
     padding: 80px 20px;
   }
@@ -953,8 +999,14 @@ footer .social-links {
   footer {
     padding: 80px 20px;
   }
+  .services {
+    padding: 80px 20px;
+  }
 }
 @media screen and (max-width: 950px) {
+  .about-page .about-content {
+    flex-wrap: wrap !important;
+  }
   .contact-row {
     display: grid;
     row-gap: 24px;
