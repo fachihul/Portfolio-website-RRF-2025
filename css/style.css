@@ -943,6 +943,7 @@ p.breadcrumb {
 .about-page .about-left {
   width: 40%;
   min-width: 300px;
+  text-align: left;
 }
 .about-page .about-left h2 {
   color: #333;
@@ -961,6 +962,16 @@ p.breadcrumb {
   color: #333;
   /* word-spacing: 3px; */
   /* padding-top: 20px; */
+}
+.about-right h2 {
+  color: #333;
+}
+.about-right h3 {
+  color: #333;
+}
+.about-right .ratings {
+  justify-content: center;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1100px) {
   .about-page {
@@ -1006,10 +1017,15 @@ p.breadcrumb {
 @media screen and (max-width: 950px) {
   .about-page .about-content {
     flex-wrap: wrap !important;
+    flex-direction: column;
   }
   .contact-row {
     display: grid;
     row-gap: 24px;
+  }
+  .about-left,
+  .about-right {
+    width: 80% !important;
   }
 }
 
