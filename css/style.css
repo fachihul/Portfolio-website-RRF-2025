@@ -115,6 +115,12 @@ header {
 .logo {
   cursor: pointer;
 }
+.logo a {
+  display: inline-block;
+  color: #fff;
+  font-size: 700;
+  font-size: 32px;
+}
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -125,6 +131,29 @@ header {
 nav ul {
   display: flex;
   gap: var(--spacing--md);
+}
+
+nav ul li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+nav ul li a:hover {
+  color: #007bff;
+}
+.search-btn .hire-btn {
+  padding: 15px 30px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.search-btn .hire-btn:hover {
+  background-color: #fff;
+  color: #007bff;
 }
 .hero {
   background: transparent;
@@ -855,7 +884,7 @@ section.about {
 }
 .contact-row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10%;
   flex-wrap: wrap;
 }
@@ -972,6 +1001,10 @@ p.breadcrumb {
 .about-right .ratings {
   justify-content: center;
   margin: 0 auto;
+}
+/* Contact Page */
+section.contact-page {
+  padding: 80px 0 0;
 }
 @media screen and (max-width: 1100px) {
   .about-page {
