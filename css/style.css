@@ -392,8 +392,8 @@ section.about {
 }
 .portfolio-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
-  grid-gap: 3.5em;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-gap: 1em;
 }
 .portfolio-item {
   position: relative;
@@ -517,8 +517,8 @@ section.about {
 }
 .skills-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
-  grid-gap: 3.5em;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-gap: 1em;
   margin: 32px 0;
 }
 .skills-items .single-item {
@@ -526,6 +526,7 @@ section.about {
   background: #fff;
   display: grid;
   row-gap: 20px;
+  border-radius: 5px;
 }
 .single-item {
   transition: 0.5s;
@@ -766,8 +767,8 @@ section.about {
 }
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
-  grid-gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-gap: 1em;
   margin: 32px 0;
 }
 .testimonials .single-testimonial-item {
