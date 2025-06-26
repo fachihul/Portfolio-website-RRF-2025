@@ -413,6 +413,7 @@ section.about {
   transition: 0.5s;
   opacity: 0;
   z-index: 20;
+  border-radius: 5px;
 }
 .portfolio-item::before {
   content: "";
@@ -428,6 +429,7 @@ section.about {
   transition: 0.5s;
   opacity: 0;
   z-index: 20;
+  border-radius: 5px;
 }
 .portfolio-item:hover::after {
   transform: rotate(3deg);
@@ -447,6 +449,7 @@ section.about {
   object-fit: cover;
   z-index: 100;
   transition: 0.5s;
+  border-radius: 5px;
 }
 .portfolio-item:hover img {
   transform: scale(0.95);
