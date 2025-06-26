@@ -554,6 +554,7 @@ section.about {
   align-items: center;
   column-gap: 2px;
   transition: 0.5s;
+  border-radius: 4px;
 }
 .single-item a p {
   color: #000;
